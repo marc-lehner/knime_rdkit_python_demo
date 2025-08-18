@@ -3,9 +3,9 @@
 
 # Extension metadata
 name: demo_python_rdkit_extension  # Will be concatenated with the group_id to an ID
-group_id: org.tutorial
+group_id: org.rdkit
 description: Demo python-rdkit extension # Human readable bundle name / description
-long_description: This extension is my first Python extension.
+long_description: This extension is my first Python extension using RDKit.
 version: 0.1.0 # Version of this Python node extension
 
 # legal information 
@@ -16,7 +16,7 @@ license_file: LICENSE.TXT # Best practice: put your LICENSE.TXT next to the knim
 
 # Python settings 
 pixi_toml_path: pixi.toml # This is necessary for bundling, but not needed during development
-extension_module: ./src/extension # The .py Python module containing the nodes of your extension
-feature_dependencies:
-  - org.knime.features.chem.types
+extension_module: ./src # The .py Python module containing the nodes of your extension
+feature_dependencies: # This Python extension depends on the following KNIME extensions
+  - org.knime.features.chem.types 
   - org.rdkit.knime.feature
