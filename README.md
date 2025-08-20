@@ -1,5 +1,7 @@
 # ![Image](https://www.knime.com/sites/default/files/knime_logo_github_40x40_4layers.png) KNIME® -  KNIME PYTHON EXTENSION TEMPLATE
 
+[![CI](https://github.com/marc-lehner/knime_rdkit_python_demo/actions/workflows/ci.yml/badge.svg)](https://github.com/marc-lehner/knime_rdkit_python_demo/actions/workflows/ci.yml)
+
 This repository is maintained by the [KNIME Team Rakete](mailto:team-rakete@knime.com).
 
 It provides a template for creating KNIME Python extensions.
