@@ -7,22 +7,23 @@ test = { cmd = "pytest" }
 
 [dependencies]
 python = "3.11.*"
-knime-extension = "5.6.*"
-knime-python-base = "5.6.*"
-knime-python-scripting = "5.6.*"
+knime-extension = "5.7.*"
+knime-python-base = "5.7.*"
+knime-python-scripting = "5.7.*"
+knime-python-versions = "5.7.*"
 rdkit = "*"
 pytest = "*"
 ipykernel = "*"
 
 [feature.build.dependencies]
 python = "3.9.*"
-knime-extension-bundling = "5.6.*"
+knime-extension-bundling = "5.7.*"
 
 [feature.debug.dependencies]
 debugpy = "*"
 
 [feature.build.tasks]
-build = { args = [{ "arg" = "dest", "default" = "./local-update-site" }], cmd = "python ./.pixi/envs/build/bin/build_python_extension.py . {{ dest }}"}
+build = { args = [{ "arg" = "dest", "default" = "./local-update-site" }], cmd = "build-python-extension . {{ dest }}"}
 
 [environments]
 build = {features = ["build"], no-default-feature = true}
