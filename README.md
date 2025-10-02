@@ -49,20 +49,21 @@ You can find general instructions on how to work with our code or develop python
 1. **Clone** this repository or use it as a **template** (click on the green "Use this template" button).
 2. **Edit** `knime.yml` to provide your metadata, license, etc. The last two lines of this file indicate that the extension created with this repository depends on the KNIME Base Chemistry Types & Nodes and the RDKit extensions. 
 3. **Modify** the `src/extension.py` file or **add** further files to implement your own logic. Note that every py file equivalent to one node needs to be imported in the init.py file.
-4. _(Optional)_ Add python packages to the environment with the following command, or by manually editing the `pixi.toml` file:
-    ```bash
-    pixi add <package_name>
-    ```
-    If you leave the `pixi.toml` file unchanged, the Python environment that you will create in the next step will have the RDKit package installed per default. 
-5. **Install** the python environment:
+4. **Install** the python environment:
     ```bash
     pixi install
     ```
-6. **Test** the extension in the KNIME Analytics Platform with the extension in debug mode by adding the following line to the `knime.ini` file (adjust <path_to_this_repository> in the `config.yml`):    
+    This will install the Python environment as defined in the `pixi.toml` file. If you leave this file unchanged, the Python environment that is installed will have the RDKit package installed per default. 
+5. _(Optional)_ Add python packages to the environment with the following command, or by manually editing the `pixi.toml` file:
+    ```bash
+    pixi add <package_name>
     ```
-    -Dknime.python.extension.config=<path/to/your/config.yml>
+    Note that you have to run the `pixi install` command again after manually editing the `pixi.toml` file. 
+6. **Install** the extension in debug mode in your KNIME Analytics Platformby running the following command: 
     ```
-   This will start the KNIME Analytics Platform with your extension installed. You can now test your extension in the KNIME Analytics Platform (e.g. demo workflow). 
+    pixi run register_debug_in_knime 
+    ```
+   Previously this step required modifying the `config.yml`and `knime.ini` files manually. This improvement will allow you to select your KNINE Analytics Platform installation and append the `-Dknime.python.extension.config=<path/to/your/config.yml>` argument automatically to the according `knime.ini` file. You can now test your extension in the KNIME Analytics Platform (e.g. demo workflow). 
 7. **Bundle** your extension:
     ```bash
     pixi run build
