@@ -18,13 +18,13 @@ The code is organized as follows:
 ├── icons
 │   └── icon.png
 ├── src
-│   └── __init.py__
+│   ├── __init.py__
 │   └── extension.py
 ├── demos
 │   └── demo-chemistry-python-adapter.knwf
 ├── tests
 │   ├── test
-│   └── conftest.py
+│   ├── conftest.py
 │   └── test_extension.py
 ├── knime.yml
 ├── pixi.toml
@@ -63,7 +63,7 @@ You can find general instructions on how to work with our code or develop python
     ```
     pixi run register_debug_in_knime 
     ```
-   Previously this step required modifying the `config.yml`and `knime.ini` files manually. This improvement will allow you to select your KNINE Analytics Platform installation and append the `-Dknime.python.extension.config=<path/to/your/config.yml>` argument automatically to the according `knime.ini` file. You can now test your extension in the KNIME Analytics Platform (e.g. demo workflow). 
+   Previously this step required modifying the `config.yml`and `knime.ini` files manually. This improvement will allow you to select your KNIME Analytics Platform installation and append the `-Dknime.python.extension.debug_knime_yaml_list=<path/to/your/knime.yml>` argument automatically to the according `knime.ini` file. You can now test your extension in the KNIME Analytics Platform (e.g. demo workflow). 
 7. **Bundle** your extension:
     ```bash
     pixi run build
