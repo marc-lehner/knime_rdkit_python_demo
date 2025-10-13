@@ -59,9 +59,9 @@ You can find general instructions on how to work with our code or develop python
     pixi add <package_name>
     ```
     Note that you have to run the `pixi install` command again after manually editing the `pixi.toml` file. 
-6. **Install** the extension in debug mode in your KNIME Analytics Platformby running the following command: 
+6. **Install** the extension in debug mode in your KNIME Analytics Platform by running the following command: 
     ```
-    pixi run register_debug_in_knime 
+    pixi run register-debug-in-knime 
     ```
    Previously this step required modifying the `config.yml`and `knime.ini` files manually. This improvement will allow you to select your KNIME Analytics Platform installation and append the `-Dknime.python.extension.debug_knime_yaml_list=<path/to/your/knime.yml>` argument automatically to the according `knime.ini` file. You can now test your extension in the KNIME Analytics Platform (e.g. demo workflow). 
 7. **Bundle** your extension:
@@ -77,7 +77,7 @@ You can find general instructions on how to work with our code or develop python
     File > Install KNIME Extensions... > Available Software Sites > Add... 
     ```
     and enter the path to your update site (by default `./local_update_site`). After that, you can install your extension.
-9. To **publish** on KNIME Hub, follow the [KNIME Hub documentation](https://docs.knime.com/latest/knime_hub_guide/index.html#publishing_your_extension).
+9. To **publish** on KNIME Hub, follow the [KNIME Hub documentation](https://docs.knime.com/latest/development_contribute_extension/index.html#_publish_your_extension).
 
 For detailed instructions on how to create a KNIME Python extension, please refer to the [KNIME Python Extension documentation](https://docs.knime.com/latest/pure_python_node_extensions_guide/index.html).
 
