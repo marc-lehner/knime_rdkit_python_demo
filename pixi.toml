@@ -1,5 +1,5 @@
 [workspace]
-channels = ["knime/label/nightly", "knime", "conda-forge"]
+channels = ["knime", "conda-forge"]
 platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 
 [tasks]
@@ -7,23 +7,23 @@ test = { cmd = "pytest" }
 
 [dependencies]
 python = "3.11.*"
-knime-extension = "5.7.*"
-knime-python-versions = "5.7.*"
-knime-python-scripting = "5.7.*"
+knime-extension = "5.*"
+knime-python-versions = "5.*"
+knime-python-scripting = "5.*"
 rdkit = "*"
 pytest = "*"
 ipykernel = "*"
 
 [feature.build.dependencies]
 python = "3.9.*"
-knime-extension-bundling = "5.7.*"
+knime-extension-bundling = "5.*"
 
 [feature.debug.dependencies]
 debugpy = "*"
 
 [feature.build.tasks]
 build = { args = [{ "arg" = "dest", "default" = "./local-update-site" }], cmd = "build-python-extension . {{ dest }}"}
-register_debug_in_knime = { description = "Register the current KNIME extension with a KNIME installation. Usage: 'pixi run register-debug-in-knime' (default locations) or 'pixi run register-debug-in-knime C:/' (search entire C: drive if no executables found). Note windows paths should not end with \\ (backslash)", args = [
+register-debug-in-knime = { description = "Register the current KNIME extension with a KNIME installation. Usage: 'pixi run register-debug-in-knime' (default locations) or 'pixi run register-debug-in-knime C:/' (search entire C: drive if no executables found). Note windows paths should not end with \\ (backslash)", args = [
                 { "arg" = "search_path", "default" = "" }], cmd = "register-debug-in-knime{% if search_path %} --search-path \"{{ search_path }}\"{% endif %}" }
 
 
