@@ -35,8 +35,8 @@ The code is organized as follows:
 
 ## General Instructions
 
-You can find general instructions on how to work with our code or develop python extensions for KNIME Analytics Platform in the KNIME documentation:
-* [KNIME Python Extension](https://docs.knime.com/latest/pure_python_node_extensions_guide/index.html)
+You can find general instructions on how to work with our code or develop Python extensions for KNIME Analytics Platform in the KNIME documentation:
+* [KNIME Python Extension](https://docs.knime.com/developers/latest/create_a_node_with_python/#python-node-extension-setup)
 
 ## Create a KNIME Python extension using RDKit based on this repository
 ### Prerequisites:
@@ -79,7 +79,7 @@ You can find general instructions on how to work with our code or develop python
     and enter the path to your update site (by default `./local_update_site`). After that, you can install your extension.
 9. To **publish** on KNIME Hub, follow the [KNIME Hub documentation](https://docs.knime.com/latest/development_contribute_extension/index.html#_publish_your_extension).
 
-For detailed instructions on how to create a KNIME Python extension, please refer to the [KNIME Python Extension documentation](https://docs.knime.com/latest/pure_python_node_extensions_guide/index.html).
+For detailed instructions on how to create a KNIME Python extension, please refer to the [KNIME Python Extension documentation](https://docs.knime.com/developers/latest/create_a_node_with_python/#python-node-extension-setup).
 
 
 ### Background information:
